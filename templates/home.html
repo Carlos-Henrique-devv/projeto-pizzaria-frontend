@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria</title>
+    <link rel="stylesheet" th:href="@{/css/home.css}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-top">
+                <img class="header-logo" th:src="@{/imgs/garfo1.png}" alt="img-header">
+
+                <nav>
+                    <a th:href="@{/signin}">Login</a>
+                    <a th:href="@{/cadastro}">Cadastro</a>
+                    <a href="#">Menu</a>
+                    <a href="#">Sobre</a>
+                    <a href="#">Contato</a>
+                    <a href="">Conta</a>
+                </nav>
+            </div>
+
+            <div class="header-image-container">
+                <img th:src="@{/imgs/360_F_567611992_70X7W94aXPfKYgUzVAcOEh03CcI7ivBC.jpg}" alt="img-header">
+
+                <div class="header-text-container">
+                    <h1>THE GOLDEN SPOON</h1>
+                    <p>A melhor pizza da baixada</p>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div>
+                <h2>Nosso Menu</h2>
+            </div>
+
+            <div class="menu-container">
+                <div class="menu-item">
+                    <img th:src="@{/imgs/calabresa.jpg}" alt="calabresa">
+
+                    <div class="menu-item-text">
+                        <h3>Pizza de Calabresa</h3>
+                        <button>Adicionar no carrinho</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img th:src="@{imgs/frango.jpg}" alt="Frango">
+
+                    <div class="menu-item-text">
+                        <h3>Pizza de Frango</h3>
+                        <button>Adicionar no carrinho</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img th:src="@{imgs/mms.jpg}" alt="M&Ms">
+
+                    <div class="menu-item-text">
+                        <h3>Pizza de M&Ms</h3>
+                        <button>Adicionar no carrinho</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img th:src="@{/imgs/mussarela.jpg}" alt="">
+
+                    <div class="menu-item-text">
+                        <h3>Pizza de Mussarela</h3>
+                        <button>Adicionar no carrinho</button>
+                    </div>
+                </div>
+            </div>
+
+            <section class="about-container">
+                <h2>Sobre Nos</h2>
+
+                <div class="about-text">
+                    <p>Fundado em 2025, The Golden Spoon oferece releituras contemporâneas de receitas clássicas,
+                        apresentando o que há de melhor em ingredientes sazonais.<br>
+                        Nossa paixão é criar experiências gastronômicas memoráveis.
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <!--        <footer>-->
+        <!--            <img src="img/garfo.png" alt="Garfo">-->
+        <!--            <img src="img/tik-tok.png" alt="Tiktok">-->
+        <!--            <img src="img/instagram.png" alt="Instagram">-->
+        <!--            <img src="img/whatsapp.png" alt="Whatsapp">-->
+        <!--            <p>Nos sigam nas redes sociais!</p>-->
+        <!--            <address>joseluizgo69@gmail.com</address>-->
+        <!--        </footer>-->
+
+    </div>
+</body>
+</html>
