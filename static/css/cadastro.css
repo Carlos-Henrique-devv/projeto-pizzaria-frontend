@@ -27,7 +27,7 @@ body {
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    height: 600px;
+    height: 650px;
     width: 100%;
     max-width: 400px;
 }
@@ -84,7 +84,6 @@ button:hover {
 button:active {
     transform: translateY(0);
 }
-
 
 .btn-link {
     display: inline-block;

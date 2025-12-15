@@ -37,8 +37,6 @@ body {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    align-items: center;
-    text-align: center;
     padding: 10px 50px;
     min-width: 100vh;
 }
@@ -61,12 +59,16 @@ body {
 .container header nav a{
     color: var(--cor-segundaria);
     text-decoration: none;
-    margin-top: 40px;
+    border: 1px solid var(--cor-segundaria);
+    border-radius: 4px;
+    padding: 5px 12px;
+    margin-top: 10px;
 }
 
 .container header nav a:hover {
     transition: 0.3s;
     color: rgba(147, 112, 56, 0.5);
+    border: 1px solid rgba(147, 112, 56, 0.5);
 }
 
 header .header-image-container {
@@ -160,7 +162,6 @@ main div h2 {
     margin-top: 10px;
     min-width: 100vh;
     min-height: 200px;
-    border: 1px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -190,6 +191,39 @@ main div h2 {
 
 .about-text h2, p {
     color: black;
+}
+
+footer {
+    background-color: var(--cor-segundaria);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+footer p {
+    color: white;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    border-radius: 5px 0 0 0;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    filter: brightness(0) invert(1);
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
 }
 
 

@@ -13,7 +13,6 @@ function cadastrar() {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
-
             },
             method: "POST",
             body: JSON.stringify({
@@ -26,13 +25,10 @@ function cadastrar() {
         })
         .then(function (res) {
              if(res.ok) {
-                console.log("Cadastro relaizado com successo!")
                 window.location.href = "/signin"
-            } else {
-                console.log("Erro no cadastro", res)
             }
+            return console.log(res);
         })
-        .catch(function (res) {console.log(res)})
 };
 
 function limparCampos() {
