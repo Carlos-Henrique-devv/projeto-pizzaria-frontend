@@ -16,24 +16,29 @@ function signin() {
             senha: Isenha.value
         })
     })
-    .then(function (res) {
-        if (res.ok) {
-            window.location.href = "/home";
-            return res.json();
+    .then(async (res) => {
+
+        if (res.status === 200) {
+            const data = await res.json();
+
+            if (data.token) {
+                localStorage.setItem("token", data.token);
+                window.location.href = "/home";
+            }
+
+            return;
         }
-        return;
-    })
-    .then(function (data) {
-        if(data.token) {
-            localStorage.setItem("token", data.token);
+
+        if (res.status === 401) {
+            return mostrarErro();
         }
-        return;
+
     })
-    .catch(function (error) {
-        console.log("Erro na requisição:", error);
+    .catch(err => {
+        console.error(err);
         mostrarErro();
-    })
-};
+    });
+}
 
 function mostrarErro() {
     errorMessage.classList.add('show');

@@ -30,6 +30,13 @@ body {
     height: 650px;
     width: 100%;
     max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box .error-message {
+    margin-bottom: 5px;
 }
 
 h2 {
@@ -39,10 +46,22 @@ h2 {
     font-size: 28px;
 }
 
+.error-message {
+    background: #fee;
+    color: #c33;
+    border-radius: 5px;
+    display: none;
+}
+
+.error-message.show {
+    display: block;
+}
+
 form {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    width: 100%;
 }
 
 input {

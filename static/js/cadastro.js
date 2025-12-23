@@ -2,9 +2,11 @@ const formulario = document.querySelector('form');
 
 const Inome = document.querySelector('.nome');
 const Iusername = document.querySelector('.username');
+const Isobrenome = document.querySelector('.sobrenome');
 const Iemail = document.querySelector('.email');
 const Isenha = document.querySelector('.senha');
 const Itel = document.querySelector('.telefone');
+const errorMessage = document.querySelector('.error-message');
 
 function cadastrar() {
 
@@ -18,22 +20,41 @@ function cadastrar() {
             body: JSON.stringify({
                 nome: Inome.value,
                 username: Iusername.value,
+                sobrenome: Isobrenome.value,
                 email: Iemail.value,
                 senha: Isenha.value,
                 telefone: Itel.value
             })
         })
-        .then(function (res) {
-             if(res.ok) {
-                window.location.href = "/signin"
-            }
-            return console.log(res);
+        .then(async (res) => {
+
+        if (res.status === 201) {
+            window.location.href = "/signin";
+            return;
+        }
+
+        if (res.status === 400) {
+            mostrarErro();
+            return;
+        }
+
         })
+        .catch(err => {
+            console.error("Erro inesperado:", err);
+        });
+};
+
+function mostrarErro() {
+    errorMessage.classList.add('show');
+    setTimeout(function() {
+        errorMessage.classList.remove('show');
+    }, 3000)
 };
 
 function limparCampos() {
     Inome.value = "",
     Iusername.value = "",
+    Isobrenome.value = "",
     Iemail.value = "",
     Isenha.value = "",
     Itel.value = ""
