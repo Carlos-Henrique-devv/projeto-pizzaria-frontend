@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -7,19 +9,16 @@
 :root {
     --cor-fundo: #d1cfcf;
     --cor-segundaria: #937038;
-
-    --font-destaque: 'destaque';
-    --font-secundaria: Arial;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+html, body {
+    font-family: 'Poppins', sans-serif;
     background: var(--cor-fundo);
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    padding: 20px;
+    min-height: 100%;
+    padding: 0px 5px;
 }
 
 .login-container {
@@ -38,9 +37,11 @@ body {
 
 h2 {
     text-align: center;
-    color: #333;
+    color: var(--cor-segundaria);
     margin-bottom: 80px;
-    font-size: 28px;
+    font-size: 1.9rem;
+    font-weight: bolder;
+    cursor: pointer;
 }
 
 .error-message {
@@ -89,7 +90,8 @@ button {
     border: none;
     border-radius: 5px;
     font-size: 16px;
-    font-weight: 600;
+    font-size: 1.1rem;
+    font-weight: bolder;
     cursor: pointer;
     transition: transform 0.2s;
 }
@@ -114,7 +116,8 @@ button:active {
         border: 2px solid var(--cor-segundaria);
         border-radius: 5px;
         font-size: 16px;
-        font-weight: 600;
+        font-size: 1.1rem;
+        font-weight: bolder;
         transition: all 0.3s;
         cursor: pointer;
 }

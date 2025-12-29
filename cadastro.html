@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/css/cadastro.css">
+    <link rel="stylesheet" href="css/cadastro.css">
     <title>Cadastro</title>
 </head>
 <body>
@@ -23,10 +23,9 @@
             <input type="tel" class="telefone" name="tel" placeholder="Telefone (Obrigatório)" required>
 
             <button>Cadastrar</button>
+            
+            <a href="signin.html" class="btn-link">Já tem conta? Faça login</a>
         </form>
-        <a th:href="@{/signin}" class="btn-link">Já tem conta? Faça login</a>
     </div>
-
-<script th:src="@{/js/cadastro.js}"></script>
 </body>
 </html>
