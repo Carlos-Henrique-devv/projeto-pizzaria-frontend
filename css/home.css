@@ -18,7 +18,7 @@ html,body {
     flex-direction: column;
     align-items: center;
     min-width: 100%;
-    height: 100vh;
+    min-height: 100%;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -131,10 +131,9 @@ header nav {
 }
 
 main {
-    width: 90%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    width: 90%;
     padding: 10px;
 }
 
@@ -142,11 +141,11 @@ main {
     margin: 30px;
     color: var(--cor-segundaria);
     cursor: pointer;
-
+    text-align: center;
 }
 
 .menu-container {
-    max-width: 100%;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     grid-auto-rows: 400px;
@@ -163,6 +162,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 auto;
     cursor: pointer;
     border-radius: 5px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
@@ -283,15 +283,7 @@ footer {
     opacity: 0.8;
 }
 
-/* Responsivo */
-
-@media (max-width: 480px) {
-    .social-icons img {
-        width: 28px;
-        height: 28px;
-    }
-}
-
+/* Responsive */
 
 @media(max-width: 900px) {
     .header-top nav{
@@ -338,13 +330,14 @@ footer {
     }
 
     .menu-item {
+        max-width: 150px;
         padding: 10px;
         gap: 5px;
     }
 
     .menu-item img {
-        max-width: 120px;
-        height: 120px;
+        width: 110px;
+        height: 110px;
         border-radius: 5px;
     }
 
@@ -357,7 +350,7 @@ footer {
         width: 100px;
         height: 40px;
         font-size: 0.8rem;
-        
+
     }
 
     .btn-add-carrinho {
@@ -375,5 +368,6 @@ footer {
         padding: 10px;
     }
   }
+
 
 
